@@ -24,7 +24,7 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/ansible:jre8-flyway-alpine
+          tags: ${{ secrets.DOCKER_USERNAME }}/ansible:jre8-flyway641-alpine
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
