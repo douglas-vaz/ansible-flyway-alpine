@@ -1,7 +1,7 @@
 name: Dockerhub publish
 on: [ push ]
 jobs:
-  Explore-GitHub-Actions:
+  Push-To-Dockerhub:
     runs-on: ubuntu-latest
     steps:
       - name: Build & Push to Docker Hub
@@ -12,4 +12,3 @@ jobs:
           USERNAME: ${{ secrets.DOCKER_USERNAME }}
           PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
           TAG_NAME: "jre8-flyway-alpine"
-          BUILDX: "true"
