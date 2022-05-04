@@ -1,4 +1,4 @@
-FROM openjdk:8-jre-alpine
+FROM eclipse-temurin:11-jre-alpine
 
 ENV ANSIBLE_VERSION=2.9.2
 
@@ -23,7 +23,7 @@ RUN apk --no-cache add --update bash openssl
 
 WORKDIR /flyway
 
-ENV FLYWAY_VERSION 6.4.1
+ENV FLYWAY_VERSION 8.5.9
 
 RUN wget https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/${FLYWAY_VERSION}/flyway-commandline-${FLYWAY_VERSION}.tar.gz \
   && tar -xzf flyway-commandline-${FLYWAY_VERSION}.tar.gz \
